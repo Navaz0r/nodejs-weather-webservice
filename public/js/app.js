@@ -4,8 +4,6 @@
 /* eslint-disable max-len */
 
 /* eslint-disable linebreak-style */
-console.log('Client side javascript file is loaded successfully.');
-
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message1');
