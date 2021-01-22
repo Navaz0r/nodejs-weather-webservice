@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (e) => {
         tempratureInfo[0].textContent = `T: ${data.temprature}°`;
         tempratureInfo[1].textContent = `F: ${data.feelslike}°`;
         messageTwo.textContent = data.result;
-        document.getElementById('message3').textContent = 'T = Temprature | F = Feelslike';
+        document.getElementById('message3').textContent = '(T = Temprature | F = Feelslike)';
       }
     });
   });
