@@ -8,6 +8,8 @@ const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message1');
 const messageTwo = document.querySelector('#message2');
+const weatherIcon = document.getElementById('weatherinfo').getElementsByTagName('img');
+const tempratureInfo = document.getElementById('weatherinfo').getElementsByTagName('h4');
 
 messageOne.textContent = 'Loading..';
 messageOne.textContent = '';
@@ -21,7 +23,11 @@ weatherForm.addEventListener('submit', (e) => {
         messageOne.textContent = data.error;
       } else {
         messageOne.textContent = data.location;
-        messageTwo.textContent = data.forecastData;
+        weatherIcon[0].src = data.icon;
+        tempratureInfo[0].textContent = `T: ${data.temprature}°`;
+        tempratureInfo[1].textContent = `F: ${data.feelslike}°`;
+        messageTwo.textContent = data.result;
+        document.getElementById('message3').textContent = 'T = Temprature | F = Feelslike';
       }
     });
   });

@@ -65,7 +65,10 @@ server.get('/weather', (req, res) => {
       }
 
       res.send({
-        forecastData,
+        temprature: forecastData.temprature,
+        feelslike: forecastData.feelslike,
+        icon: forecastData.icon,
+        result: forecastData.result,
         location,
         address,
       });

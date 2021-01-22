@@ -42,7 +42,7 @@ header a {
     width: 250px;
 }
 
-#message1, #message2 {
+#message1, #message2, #message3 {
     margin-top: 16px;
     padding-top: 16px;
     font-family: 'Courier New', Courier, monospace, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -61,3 +61,21 @@ button {
     color: white;
     padding: 8px;
 }
+
+#weatherinfo {
+    display: flex;
+    max-height: 64px;
+}
+#weatherinfo h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #555555;;
+    font-size: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#weatherinfo img {
+    border-radius: 50%;
+    max-width: 64px;
+    max-height: 64px;
+  }

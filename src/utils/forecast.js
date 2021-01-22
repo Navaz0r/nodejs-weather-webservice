@@ -14,7 +14,12 @@ const forecast = (lat, lon, callback) => {
     } else if (body.error !== undefined && body.error.code === 615) {
       callback('API request failed. Please try again or contact support.', undefined);
     } else {
-      callback(undefined, `Currently the weather is ${body.current.weather_descriptions[0]} and the temperature is ${body.current.temperature} degree, it feels like ${body.current.feelslike} degree.`);
+      callback(undefined, {
+        temprature: body.current.temperature,
+        feelslike: body.current.feelslike,
+        icon: body.current.weather_icons[0],
+        result: `Currently the weather is ${body.current.weather_descriptions[0]} and the temperature is ${body.current.temperature}°, it feels like ${body.current.feelslike}°.`,
+      });
     }
   });
 };
